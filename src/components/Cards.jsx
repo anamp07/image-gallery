@@ -8,11 +8,12 @@ const Cards = () => {
     const [images, loading, handleSubmit] = useFetchImages()
 
   return (
-    <div className='text'center>
+    <div className='text-center'>
         <Search handleSubmit={handleSubmit} />
+        {loading && <Loading />}
+
         <div className="columns">
 
-            {loading && <Loading />}
 
             <div className='row'>
                 {
